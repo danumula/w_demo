@@ -5,7 +5,7 @@
  =========================================================
 
  * Copyright 2019 Dinesh Anumula
- * Licensed under MIT (https://github.com/danumula/F2S/blob/master/README.md)
+ * Licensed under MIT (https://github.com/danumula/w_demo/blob/master/LICENSE.md)
 
  =========================================================
 
