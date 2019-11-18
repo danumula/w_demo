@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Renderer, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, Inject, Renderer, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
@@ -13,6 +13,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 })
 export class AppComponent implements OnInit {
     private _router: Subscription;
+    windowScrolled: boolean;
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
     constructor( private renderer : Renderer, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
@@ -53,11 +54,51 @@ export class AppComponent implements OnInit {
     removeFooter() {
         var titlee = this.location.prepareExternalUrl(this.location.path());
         titlee = titlee.slice( 1 );
-        if(titlee === 'signup' || titlee === 'nucleoicons'){
+        if (titlee === 'signup' || titlee === 'nucleoicons'){
             return false;
-        }
-        else {
+        }  else {
             return true;
         }
+    }
+
+
+// mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+// window.onscroll = function() {scrollFunction()};
+// test = window.localStorage
+
+// scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     // mybutton.style.display = "block";
+//     window.onscroll = {scrollFunction() };
+//   } else {
+//     // mybutton.style.display = "none";
+//   }
+// }
+
+// // When the user clicks on the button, scroll to the top of the document
+// topFunction() {
+//   document.body.scrollTop = 0; // For Safari
+//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+// }
+
+
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+        if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
+            this.windowScrolled = true;
+        } else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+            this.windowScrolled = false;
+        }
+    }
+    scrollToTop() {
+        (function smoothscroll() {
+            const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            if (currentScroll > 0) {
+                window.requestAnimationFrame(smoothscroll);
+                window.scrollTo(0, currentScroll - (currentScroll / 8));
+            }
+        })();
     }
 }

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="https://www.creative-tim.com">Paper Kit 2 Angular</a>
+            <a class="navbar-brand" href="#" target="_top" [routerLink]="['/home']">ITLookingGlass</a>
             <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse"
                 data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                 aria-label="Toggle navigation" (click)="sidebarToggle()">
@@ -13,66 +13,47 @@
         <div class="navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <!-- <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
-                        <i class="fa fa-twitter"></i>
-                        <p class="d-lg-none">Twitter</p>
-                    </a> -->
                     <div ngbDropdown class="d-inline-block dropdown">
-                        <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Services</a>
+                        <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Products &amp; Services</a>
                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
-                            <a class="dropdown-item">Action - 1</a>
-                            <a class="dropdown-item">Another Action</a>
-                            <a class="dropdown-item">Something else is here</a>
+                            <a class="dropdown-item">Community Strategy</a>
+                            <a class="dropdown-item">B2B Commerce Strategy</a>
                         </div>
                     </div>
                 </li>
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <!-- <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom"
-                        href="https://www.facebook.com/CreativeTim" target="_blank">
-                        <i class="fa fa-facebook-square"></i>
-                        <p class="d-lg-none">Facebook</p>
-                    </a> -->
                     <div ngbDropdown class="d-inline-block dropdown">
                         <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Solutions</a>
                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
-                            <a class="dropdown-item">Action - 1</a>
-                            <a class="dropdown-item">Another Action</a>
-                            <a class="dropdown-item">Something else is here</a>
+                            <a class="dropdown-item">Community Kick Start</a>
+                            <a class="dropdown-item">Custom Template Solutions</a>
                         </div>
                     </div>
                 </li>
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <!-- <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom"
-                        href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
-                        <i class="fa fa-instagram"></i>
-                        <p class="d-lg-none">Instagram</p>
-                    </a> -->
                     <div ngbDropdown class="d-inline-block dropdown">
                         <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Industry Focus</a>
                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
-                            <a class="dropdown-item">Action - 1</a>
-                            <a class="dropdown-item">Another Action</a>
-                            <a class="dropdown-item">Something else is here</a>
+                            <a class="dropdown-item">Manufacturing</a>
+                            <a class="dropdown-item">Hi-Tech</a>
+                            <a class="dropdown-item">Financial Services</a>
+                            <a class="dropdown-item">Customer Package Goods</a>
                         </div>
                     </div>
                 </li>
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <!-- <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom"
-                        href="https://www.github.com/CreativeTimOfficial/paper-kit-2-angular" target="_blank">
-                        <i class="fa fa-github"></i>
-                        <p class="d-lg-none">GitHub</p>
-                    </a> -->
                     <a href="#" target="_blank" class="nav-link">Resources</a>
                 </li>
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <!-- <a href="http://pk2-angular.creative-tim.com/documentation/tutorial" class="nav-link"
-                        target="_blank"><i class="nc-icon nc-book-bookmark"></i> Documentation</a> -->
                     <div ngbDropdown class="d-inline-block dropdown">
                         <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Company</a>
                         <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
-                            <a class="dropdown-item">Action - 1</a>
-                            <a class="dropdown-item">Another Action</a>
-                            <a class="dropdown-item">Something else is here</a>
+                            <a class="dropdown-item">Events</a>
+                            <a class="dropdown-item">About Us</a>
+                            <a class="dropdown-item">News &amp; Press Releases</a>
+                            <a class="dropdown-item">Partners</a>
+                            <a class="dropdown-item">Blog</a>
+                            <a class="dropdown-item">Careers</a>
                         </div>
                     </div>
                 </li>

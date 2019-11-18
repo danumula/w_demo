@@ -15,6 +15,12 @@ import { NgbDateStruct, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
         border-radius: 0;
         height: 600px;
     }
+    ngb-carousel::ng-deep > .carousel-control-prev {
+        opacity: 50%;
+    }
+    ngb-carousel::ng-deep > .carousel-control-next {
+        opacity: 50%;
+    }
     `]
 })
 
